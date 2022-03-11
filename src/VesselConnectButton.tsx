@@ -1,4 +1,4 @@
-import useVessel from "./useVessel";
+import useVesselLink from "./useVesselLink";
 
 export default function VesselConnectButton({
   children = "Connect CRM",
@@ -9,7 +9,7 @@ export default function VesselConnectButton({
   style?: React.CSSProperties;
   className?: string;
 }) {
-  const { error, open } = useVessel();
+  const { error, open } = useVesselLink();
 
   return (
     <div>

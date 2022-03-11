@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useScript from "react-script-hook";
 
-export default function useVessel() {
+export default function useVesselLink() {
   const [loading, error] = useScript({
     src: "https://cdn.vessel.land/init.js",
     checkForExisting: true,

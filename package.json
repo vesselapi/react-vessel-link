@@ -1,5 +1,5 @@
 {
-  "name": "@vesselapi/react-vessel",
+  "name": "@vesselapi/react-vessel-link",
   "version": "1.0.0",
   "description": "A React component to open the Vessel Connect Modal",
   "main": "dist/index.umd.js",
