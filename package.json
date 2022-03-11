@@ -1,7 +1,7 @@
 {
-  "name": "@usespout/react-sprout-connect",
+  "name": "@vesselapi/react-vessel",
   "version": "1.0.0",
-  "description": "A React component for Sprout Connect",
+  "description": "A React component for Vessel Connect",
   "main": "dist/index.umd.js",
   "module": "dist/index.esm.js",
   "registry": "https://registry.npmjs.org",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/usespout/react-sprout-link.git"
+    "url": "git+https://github.com/vesselapi/react-vessel.git"
   },
   "author": "getKinit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/usespout/react-sprout-link/issues"
+    "url": "https://github.com/vesselapi/react-vessel/issues"
   },
-  "homepage": "https://github.com/usespout/react-sprout-link#readme",
+  "homepage": "https://github.com/vesselapi/react-vessel#readme",
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
