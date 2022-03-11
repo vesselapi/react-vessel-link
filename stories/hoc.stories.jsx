@@ -3,7 +3,7 @@ import React from "react";
 import App from "./hoc";
 
 export default {
-  title: "Hoc/SproutConnect",
+  title: "Hoc/VesselConnectButton",
   component: App,
 };
 
@@ -14,5 +14,5 @@ function Template() {
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: "SproutConnect",
+  label: "VesselConnectButton",
 };
