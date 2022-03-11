@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import useScript from "react-script-hook";
 
 export default function useVessel() {
@@ -6,8 +7,24 @@ export default function useVessel() {
     checkForExisting: true,
   });
 
+  const [popupLoaded, setPopupLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!loading && window && window.Vessel) {
+      window.Vessel.init({
+        onLoaded: () => setPopupLoaded(true),
+      });
+    }
+  }, [loading]);
+
+  const open = () => {
+    if (popupLoaded) {
+      window.Vessel.open();
+    }
+  };
+
   return {
-    error: false,
-    open: () => "",
+    error,
+    open,
   };
 }
