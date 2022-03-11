@@ -1,14 +1,15 @@
-import React from "react";
-
 import useVessel from "./useVessel";
 
 export default function VesselConnectButton({
   children = "Connect CRM",
   style,
   className,
+}: {
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
+  className?: string;
 }) {
   const { error, open } = useVessel();
-
 
   return (
     <div>
