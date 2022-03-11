@@ -1,7 +1,7 @@
 {
   "name": "@vesselapi/react-vessel",
   "version": "1.0.0",
-  "description": "A React component for Vessel Connect",
+  "description": "A React component to open the Vessel Connect Modal",
   "main": "dist/index.umd.js",
   "module": "dist/index.esm.js",
   "registry": "https://registry.npmjs.org",
@@ -22,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/vesselapi/react-vessel.git"
   },
-  "author": "getKinit",
+  "author": "vessel",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vesselapi/react-vessel/issues"
