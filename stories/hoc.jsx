@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SproutConnectLink } from "../src";
+import { VesselConnectButton } from "../src";
 
 function App() {
   const onExit = (error, metadata) => console.log("onExit", error, metadata);
@@ -10,7 +10,7 @@ function App() {
     console.log("onSuccess", token, metadata);
 
   return (
-    <SproutConnectLink
+    <VesselConnectButton
       className="CustomButton"
       style={{ padding: "20px", fontSize: "16px", cursor: "pointer" }}
       token=""
@@ -19,7 +19,7 @@ function App() {
       onEvent={onEvent}
     >
       Open Link and connect your CRM!
-    </SproutConnectLink>
+    </VesselConnectButton>
   );
 }
 

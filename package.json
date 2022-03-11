@@ -65,5 +65,8 @@
   "tags": [
     "react",
     "vessel"
-  ]
+  ],
+  "dependencies": {
+    "react-script-hook": "^1.6.0"
+  }
 }
