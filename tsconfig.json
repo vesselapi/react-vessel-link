@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "jsx": "react-jsx", // This let's us forgo needing to import React.
+      "noEmit": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "resolveJsonModule": true
+    },
+    "include": ["./src"]
+  }
