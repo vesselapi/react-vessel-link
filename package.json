@@ -10,13 +10,14 @@
     "src"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "sb": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,10 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vesselapi/react-vessel/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "homepage": "https://github.com/vesselapi/react-vessel#readme",
   "devDependencies": {

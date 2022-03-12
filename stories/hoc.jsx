@@ -1,6 +1,6 @@
 import React from "react";
 
-import { VesselConnectButton } from "../src";
+import { VesselConnectButton } from "../src/index.ts";
 
 function App() {
   return (
