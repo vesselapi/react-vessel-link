@@ -12,24 +12,23 @@ export default function VesselConnectButton({
   const { error, open } = useVesselLink();
 
   return (
-    <div>
-      <button
-        disabled={Boolean(error)}
-        type="button"
-        className={className}
-        style={{
-          padding: "6px 4px",
-          outline: "none",
-          background: "#FFFFFF",
-          border: "2px solid #F1F1F1",
-          borderRadius: "4px",
-          ...style,
-        }}
-        onClick={() => open()}
-      >
-        {children}
-      </button>
-    </div>
+    <button
+      disabled={Boolean(error)}
+      type="button"
+      className={className}
+      style={{
+        padding: "10px 20px",
+        outline: "none",
+        background: "#FFFFFF",
+        border: "2px solid #F1F1F1",
+        borderRadius: "4px",
+        cursor: "pointer",
+        ...style,
+      }}
+      onClick={() => open()}
+    >
+      {children}
+    </button>
   );
 }
 
