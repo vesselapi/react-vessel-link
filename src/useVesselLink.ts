@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import useScript from "react-script-hook";
 
-export default function useVesselLink() {
+import { ClientConfig } from "./types";
+
+export default function useVesselLink(config: ClientConfig) {
   const [loading, error] = useScript({
     src: "https://cdn.vessel.land/init.js",
     checkForExisting: true,
@@ -10,15 +12,19 @@ export default function useVesselLink() {
   const [popupLoaded, setPopupLoaded] = useState(false);
 
   useEffect(() => {
-    if (!loading && window && window.Vessel) {
+    if (!loading && window.Vessel) {
       window.Vessel.init({
-        onLoaded: () => setPopupLoaded(true),
+        ...config,
+        onLoad: () => {
+          setPopupLoaded(true);
+          config.onLoad && config.onLoad();
+        },
       });
     }
   }, [loading]);
 
   const open = () => {
-    if (popupLoaded) {
+    if (popupLoaded && !error && !loading && window.Vessel) {
       window.Vessel.open();
     }
   };

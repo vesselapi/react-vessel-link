@@ -1,15 +1,19 @@
+import { ClientConfig } from "./types";
 import useVesselLink from "./useVesselLink";
+
+type VesselConnectButtonProps = {
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
+  className?: string;
+} & ClientConfig;
 
 export default function VesselConnectButton({
   children = "Connect CRM",
   style,
   className,
-}: {
-  children?: React.ReactNode;
-  style?: React.CSSProperties;
-  className?: string;
-}) {
-  const { error, open } = useVesselLink();
+  ...config
+}: VesselConnectButtonProps) {
+  const { error, open } = useVesselLink(config);
 
   return (
     <button
