@@ -19,6 +19,7 @@ export default function useVesselLink(config: ClientConfig) {
           setPopupLoaded(true);
           config.onLoad && config.onLoad();
         },
+        onClose: () => config.onClose && config.onClose(),
       });
     }
   }, [loading]);
