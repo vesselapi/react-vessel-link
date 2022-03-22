@@ -7,6 +7,7 @@ export interface ClientConfig {
 
 export interface VesselConfig {
   onLoad?: () => void;
+  onClose?: () => void;
 }
 
 export interface Vessel {
