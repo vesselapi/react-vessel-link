@@ -1,13 +1,12 @@
 {
   "name": "@vesselapi/react-vessel-link",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A React component to open the Vessel Connect Modal",
   "main": "dist/index.umd.js",
   "module": "dist/index.esm.js",
   "registry": "https://registry.npmjs.org",
   "files": [
-    "dist",
-    "src"
+    "dist/*.js"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\"",
@@ -27,10 +26,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vesselapi/react-vessel/issues"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
   },
   "homepage": "https://github.com/vesselapi/react-vessel#readme",
   "devDependencies": {
