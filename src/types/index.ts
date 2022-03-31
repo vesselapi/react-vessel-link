@@ -12,7 +12,7 @@ export interface VesselConfig {
 
 export interface Vessel {
   init: (options: VesselConfig) => void;
-  open: () => void;
+  open: (integrationId?: string) => void;
 }
 
 declare global {
