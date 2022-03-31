@@ -24,9 +24,9 @@ export default function useVesselLink(config: ClientConfig) {
     }
   }, [loading]);
 
-  const open = () => {
+  const open = (integrationId?: string) => {
     if (popupLoaded && !error && !loading && window.Vessel) {
-      window.Vessel.open();
+      window.Vessel.open(integrationId);
     }
   };
 
