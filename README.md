@@ -51,8 +51,7 @@ function App() {
   return <button onClick={() => open()}>Connect your CRM!</button>
 }
 ```
-
-A common pattern is to embed each of the Vessel supported integrations directly into your app instead of using the selection modal. This allows for an additional level of white-labeling and will result in the modal opening directly to the given integration's authentication flow. Currently, this is only supported when using the `useVesselLink` hook.
+If you'd like to directly open to the auth flow for a specific integration without having the user go through the selection flow, you can pass an `integrationId` to the open function returned by `useVesselLink`. Currently, this is only supported when using the `useVesselLink` hook.
 
 Here's an example of emeding the integrations directly into your application:
 ```jsx
