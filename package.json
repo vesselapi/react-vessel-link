@@ -1,6 +1,6 @@
 {
   "name": "@vesselapi/react-vessel-link",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A React component to open the Vessel Connect Modal",
   "main": "dist/index.umd.js",
   "module": "dist/index.esm.js",
@@ -16,7 +16,7 @@
     "sb": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "rollup -c",
-    "publish": "npm publish --access public"
+    "publish": "npm run build; npm publish --access public"
   },
   "repository": {
     "type": "git",
