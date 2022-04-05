@@ -71,7 +71,7 @@ function App() {
    )
 }
 ```
-~*Note*: `useVesselLink` must only be called once~
+*Note*: `useVesselLink` must only be called once
 
 ### Issues/Questions
 Contact us at `support@vessel.land`.
