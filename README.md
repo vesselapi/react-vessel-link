@@ -33,9 +33,9 @@ function App() {
   return (
     <VesselConnectButton
       linkToken={linkToken}
-      onSuccess={(publicToken) => console.log("public token: ", publicToken)}
-      onClose={() => console.log("closed")}
-      onLoad={() => console.log("loaded")}
+      onSuccess={(publicToken) => console.log('public token: ', publicToken)}
+      onClose={() => console.log('closed')}
+      onLoad={() => console.log('loaded')}
     >
       Connect your CRM!
     </VesselConnectButton>
@@ -47,9 +47,9 @@ function App() {
 function App() {
   const { open } = useVesselLink({
     linkToken,
-    onSuccess: (publicToken) => console.log("public token: ", publicToken),
-    onClose: () => console.log("closed"),
-    onLoad: () => console.log("loaded"),
+    onSuccess: (publicToken) => console.log('public token: ', publicToken),
+    onClose: () => console.log('closed'),
+    onLoad: () => console.log('loaded'),
   });
 
   return <button onClick={() => open()}>Connect your CRM!</button>;
@@ -64,9 +64,9 @@ Here's an example of emeding the integrations directly into your application:
 function App() {
   const { open } = useVesselLink({
     linkToken,
-    onSuccess: (publicToken) => console.log("public token: ", publicToken),
-    onClose: () => console.log("closed"),
-    onLoad: () => console.log("loaded"),
+    onSuccess: (publicToken) => console.log('public token: ', publicToken),
+    onClose: () => console.log('closed'),
+    onLoad: () => console.log('loaded'),
   });
 
   return (
