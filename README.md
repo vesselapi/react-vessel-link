@@ -58,7 +58,7 @@ function App() {
 
 If you'd like to directly open to the auth flow for a specific integration without having the user go through the selection flow, you can pass an `integrationId` to the open function returned by `useVesselLink`. Currently, this is only supported when using the `useVesselLink` hook.
 
-Here's an example of emeding the integrations directly into your application:
+Here's an example of embedding the integrations directly into your application:
 
 ```jsx
 function App() {
@@ -71,9 +71,7 @@ function App() {
 
   return (
     <div>
-      <button
-        onClick={() => open({ integrationId: IntegrationIds.Salesforce })}
-      >
+      <button onClick={() => open({ integrationId: IntegrationIds.Salesforce })}>
         Connect Salesforce
       </button>
       <button onClick={() => open({ integrationId: IntegrationIds.HubSpot })}>
