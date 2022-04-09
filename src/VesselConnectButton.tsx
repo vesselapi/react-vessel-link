@@ -1,5 +1,7 @@
-import { ClientConfig } from "./types";
-import useVesselLink from "./useVesselLink";
+import React from 'react';
+
+import { ClientConfig } from './types';
+import useVesselLink from './useVesselLink';
 
 type VesselConnectButtonProps = {
   children?: React.ReactNode;
@@ -8,7 +10,7 @@ type VesselConnectButtonProps = {
 } & ClientConfig;
 
 export default function VesselConnectButton({
-  children = "Connect CRM",
+  children = 'Connect CRM',
   style,
   className,
   ...config
@@ -21,12 +23,12 @@ export default function VesselConnectButton({
       type="button"
       className={className}
       style={{
-        padding: "10px 20px",
-        outline: "none",
-        background: "#FFFFFF",
-        border: "2px solid #F1F1F1",
-        borderRadius: "4px",
-        cursor: "pointer",
+        padding: '10px 20px',
+        outline: 'none',
+        background: '#FFFFFF',
+        border: '2px solid #F1F1F1',
+        borderRadius: '4px',
+        cursor: 'pointer',
         ...style,
       }}
       onClick={() => open()}
@@ -36,4 +38,4 @@ export default function VesselConnectButton({
   );
 }
 
-VesselConnectButton.displayName = "VesselConnectButton";
+VesselConnectButton.displayName = 'VesselConnectButton';

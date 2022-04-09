@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import { VesselConnectButton } from "../src/index.ts";
+import { VesselConnectButton } from '../src/index.ts';
 
 function App() {
-  const onClose = (error, metadata) => console.log("onClose", error, metadata);
+  const onClose = (error, metadata) => console.log('onClose', error, metadata);
   const onLoad = (eventName, metadata) =>
-    console.log("onLoad", eventName, metadata);
+    console.log('onLoad', eventName, metadata);
   const onSuccess = (token, metadata) =>
-    console.log("onSuccess", token, metadata);
+    console.log('onSuccess', token, metadata);
 
   return (
     <VesselConnectButton
       className="CustomButton"
-      style={{ padding: "20px", fontSize: "16px", cursor: "pointer" }}
+      style={{ padding: '20px', fontSize: '16px', cursor: 'pointer' }}
       onClose={onClose}
       onLoad={onLoad}
       onSuccess={onSuccess}
