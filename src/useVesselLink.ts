@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import useScript from "react-script-hook";
+import { useEffect, useState } from 'react';
+import useScript from 'react-script-hook';
 
-import { ClientConfig } from "./types";
+import { ClientConfig } from './types';
 
 export default function useVesselLink(config: ClientConfig) {
   const [loading, error] = useScript({
-    src: "https://cdn.vessel.land/init.js",
+    src: 'https://cdn.vessel.land/init.js',
     checkForExisting: true,
   });
 

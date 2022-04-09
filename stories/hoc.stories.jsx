@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import App from "./hoc";
+import App from './hoc';
 
 export default {
-  title: "Hoc/VesselConnectButton",
+  title: 'Hoc/VesselConnectButton',
   component: App,
 };
 
@@ -14,5 +14,5 @@ function Template() {
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: "VesselConnectButton",
+  label: 'VesselConnectButton',
 };
