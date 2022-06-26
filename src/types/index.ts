@@ -1,18 +1,29 @@
+export enum IntegrationId {
+  Salesforce = 'salesforce',
+  HubSpot = 'hubspot',
+  Pipedrive = 'pipedrive',
+}
+
 export interface ClientConfig {
-  linkToken: string; // Token used to verify consumers account.
-  onSuccess: (publicToken: string) => void;
+  onSuccess: (publicToken: string, integrationId: IntegrationId) => void;
   onClose?: () => void;
   onLoad?: () => void;
 }
 
 export interface VesselConfig {
-  onLoad?: () => void;
   onClose?: () => void;
+  onLoad?: () => void;
 }
 
 export interface Vessel {
   init: (options: VesselConfig) => void;
-  open: (integrationId?: string) => void;
+  open: ({
+    integrationId,
+    linkToken, // Token used to verify user's account.
+  }: {
+    integrationId?: IntegrationId;
+    linkToken: string;
+  }) => void;
 }
 
 declare global {

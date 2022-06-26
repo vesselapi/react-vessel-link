@@ -7,14 +7,19 @@ type VesselConnectButtonProps = {
   children?: React.ReactNode;
   style?: React.CSSProperties;
   className?: string;
+  getLinkToken: () => Promise<string>; // Retrieves and returns a linkToken
 } & ClientConfig;
 
 export default function VesselConnectButton({
   children = 'Connect CRM',
   style,
   className,
+  getLinkToken,
   ...config
 }: VesselConnectButtonProps) {
+  if (!getLinkToken) {
+    throw new Error('Prop `getLinkToken` callback must be present.');
+  }
   const { error, open } = useVesselLink(config);
 
   return (
@@ -31,7 +36,7 @@ export default function VesselConnectButton({
         cursor: 'pointer',
         ...style,
       }}
-      onClick={() => open()}
+      onClick={async () => open({ linkToken: await getLinkToken() })}
     >
       {children}
     </button>
