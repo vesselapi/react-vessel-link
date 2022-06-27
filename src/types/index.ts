@@ -1,11 +1,5 @@
-export enum IntegrationId {
-  Salesforce = 'salesforce',
-  HubSpot = 'hubspot',
-  Pipedrive = 'pipedrive',
-}
-
 export interface ClientConfig {
-  onSuccess: (publicToken: string, integrationId: IntegrationId) => void;
+  onSuccess: (publicToken: string, integrationId: string) => void;
   onClose?: () => void;
   onLoad?: () => void;
 }
@@ -21,7 +15,7 @@ export interface Vessel {
     integrationId,
     linkToken, // Token used to verify user's account.
   }: {
-    integrationId?: IntegrationId;
+    integrationId?: string;
     linkToken: string;
   }) => void;
 }

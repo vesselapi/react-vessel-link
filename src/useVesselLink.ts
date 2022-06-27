@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import useScript from 'react-script-hook';
 
-import { ClientConfig, IntegrationId } from './types';
+import { ClientConfig } from './types';
 
 export default function useVesselLink(config: ClientConfig) {
   const [loading, error] = useScript({
@@ -29,7 +29,7 @@ export default function useVesselLink(config: ClientConfig) {
     integrationId,
   }: {
     linkToken: string;
-    integrationId?: IntegrationId;
+    integrationId?: string;
   }) => {
     if (popupLoaded && !error && !loading && window.Vessel) {
       window.Vessel.open({ integrationId, linkToken });
