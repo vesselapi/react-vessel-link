@@ -16,7 +16,7 @@ function App() {
       onClose={onClose}
       onLoad={onLoad}
       onSuccess={onSuccess}
-      linkToken="<TEST_API_TOKEN>"
+      getLinkToken={async () => '<TEST_LINK_TOKEN>'}
     >
       Open Link and connect your CRM!
     </VesselConnectButton>
