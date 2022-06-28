@@ -39,5 +39,6 @@ export default function useVesselLink(config: ClientConfig) {
   return {
     error,
     open,
+    loading: !popupLoaded,
   };
 }
