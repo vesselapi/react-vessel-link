@@ -12,7 +12,7 @@ export default function useVesselLink(config: ClientConfig) {
   const [popupLoaded, setPopupLoaded] = useState(false);
 
   useEffect(() => {
-    if (!loading && window.Vessel) {
+    if (window.Vessel) {
       window.Vessel.init({
         ...config,
         onLoad: () => {
@@ -31,7 +31,7 @@ export default function useVesselLink(config: ClientConfig) {
     linkToken: string;
     integrationId?: string;
   }) => {
-    if (popupLoaded && !error && !loading && window.Vessel) {
+    if (popupLoaded && !error && window.Vessel) {
       window.Vessel.open({ integrationId, linkToken });
     }
   };

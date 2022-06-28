@@ -32,7 +32,7 @@ Here are some example uses of each:
 function App() {
   return (
     <VesselConnectButton
-      linkToken={linkToken}
+      getLinkToken={async () => await api.post('link/token')}
       onSuccess={(publicToken) => console.log('public token: ', publicToken)}
       onClose={() => console.log('closed')}
       onLoad={() => console.log('loaded')}
@@ -46,13 +46,12 @@ function App() {
 ```js
 function App() {
   const { open } = useVesselLink({
-    linkToken,
     onSuccess: (publicToken) => console.log('public token: ', publicToken),
     onClose: () => console.log('closed'),
     onLoad: () => console.log('loaded'),
   });
 
-  return <button onClick={() => open()}>Connect your CRM!</button>;
+  return <button onClick={() => open({ linkToken })}>Connect your CRM!</button>;
 }
 ```
 
@@ -63,7 +62,6 @@ Here's an example of embedding the integrations directly into your application:
 ```jsx
 function App() {
   const { open } = useVesselLink({
-    linkToken,
     onSuccess: (publicToken) => console.log('public token: ', publicToken),
     onClose: () => console.log('closed'),
     onLoad: () => console.log('loaded'),
@@ -71,10 +69,24 @@ function App() {
 
   return (
     <div>
-      <button onClick={() => open({ integrationId: IntegrationIds.Salesforce })}>
+      <button
+        onClick={async () =>
+          open({
+            integrationId: IntegrationIds.Salesforce,
+            linkToken: await getLinkToken(),
+          })
+        }
+      >
         Connect Salesforce
       </button>
-      <button onClick={() => open({ integrationId: IntegrationIds.HubSpot })}>
+      <button
+        onClick={async () =>
+          open({
+            integrationId: IntegrationIds.HubSpot,
+            linkToken: await getLinkToken(),
+          })
+        }
+      >
         Connect HubSpot
       </button>
     </div>
