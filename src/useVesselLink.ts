@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import useScript from 'react-script-hook';
 
 import { ClientConfig } from './types';
@@ -46,6 +46,5 @@ export default function useVesselLink(config: ClientConfig) {
   return {
     error,
     open,
-    loading: !popupLoaded,
   };
 }
