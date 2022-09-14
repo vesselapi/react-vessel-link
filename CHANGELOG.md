@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.4
+
+- Fix bug in package causing it to reference the dev APIs [#23](https://github.com/vesselapi/react-vessel-link/pull/23)
+
 ## 1.1.3
 
 - Add support for React 18.x.x peer dependency [#20](https://github.com/vesselapi/react-vessel-link/pull/20)
