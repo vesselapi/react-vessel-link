@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import useScript from 'react-script-hook';
 
 import { ClientConfig } from './types';
@@ -9,14 +9,11 @@ export default function useVesselLink(config: ClientConfig) {
     checkForExisting: true,
   });
 
-  const [popupLoaded, setPopupLoaded] = useState(false);
-
   useEffect(() => {
     if (window.Vessel) {
       window.Vessel.init({
         ...config,
         onLoad: () => {
-          setPopupLoaded(true);
           config.onLoad && config.onLoad();
         },
         onClose: () => config.onClose && config.onClose(),
@@ -31,14 +28,23 @@ export default function useVesselLink(config: ClientConfig) {
     linkToken: string;
     integrationId?: string;
   }) => {
-    if (popupLoaded && !error && window.Vessel) {
-      window.Vessel.open({ integrationId, linkToken });
+    if (error) {
+      throw new Error(`Error loading Vessel script: ${error}`);
     }
+    if (!window.Vessel) {
+      console.error('Vessel is not initialized');
+      return;
+    }
+    if (!window.Vessel.state?.isLoaded) {
+      console.error('Vessel has not been loaded, did you call Vessel.init()?');
+      return;
+    }
+    // Open modal
+    window.Vessel.open({ integrationId, linkToken });
   };
 
   return {
     error,
     open,
-    loading: !popupLoaded,
   };
 }
