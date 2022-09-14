@@ -9,6 +9,10 @@ export interface VesselConfig {
   onLoad?: () => void;
 }
 
+interface VesselState {
+  isLoaded: boolean;
+}
+
 export interface Vessel {
   init: (options: VesselConfig) => void;
   open: ({
@@ -18,6 +22,7 @@ export interface Vessel {
     integrationId?: string;
     linkToken: string;
   }) => void;
+  state: VesselState;
 }
 
 declare global {
