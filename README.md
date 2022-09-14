@@ -72,7 +72,7 @@ function App() {
       <button
         onClick={async () =>
           open({
-            integrationId: IntegrationIds.Salesforce,
+            integrationId: 'salesforce',
             linkToken: await getLinkToken(),
           })
         }
@@ -82,7 +82,7 @@ function App() {
       <button
         onClick={async () =>
           open({
-            integrationId: IntegrationIds.HubSpot,
+            integrationId: 'hubspot',
             linkToken: await getLinkToken(),
           })
         }
@@ -93,8 +93,6 @@ function App() {
   );
 }
 ```
-
-_Note_: `useVesselLink` must only be called once
 
 ### Issues/Questions
 
