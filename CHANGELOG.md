@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.5
+
+- Handle re-mounts gracefully [#24](https://github.com/vesselapi/react-vessel-link/pull/24)
+
 ## 1.1.4
 
 - Fix bug in package causing it to reference the dev APIs [#23](https://github.com/vesselapi/react-vessel-link/pull/23)
