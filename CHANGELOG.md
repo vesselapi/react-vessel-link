@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.6
+
+- Add Apache License [#27](https://github.com/vesselapi/react-vessel-link/pull/27)
+
 ## 1.1.5
 
 - Handle re-mounts gracefully [#24](https://github.com/vesselapi/react-vessel-link/pull/24)
