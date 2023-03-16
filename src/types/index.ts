@@ -2,7 +2,7 @@ export interface ClientConfig {
   onSuccess: (publicToken: string) => void;
   onClose?: () => void;
   onLoad?: () => void;
-  domain?: string;
+  baseUrl?: string;
 }
 
 export interface VesselConfig {

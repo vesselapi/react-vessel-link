@@ -7,7 +7,7 @@ const BASE_URL = 'https://cdn.vessel.land';
 
 export default function useVesselLink(config: ClientConfig) {
   const [loading, error] = useScript({
-    src: `${config.domain ?? BASE_URL}/init.js`,
+    src: `${config.baseUrl ?? BASE_URL}/init.js`,
     checkForExisting: true,
   });
 
